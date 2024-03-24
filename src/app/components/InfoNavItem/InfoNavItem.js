@@ -16,18 +16,10 @@ function InfoNavItem({
       style={{
         color: `${activedCategory === itemSlug ? "#FFFFFF" : "#38384F"}`,
         backgroundColor: `${
-          activedCategory === itemSlug
-            ? PLANET_TABS_COLORS[planetName]
-            : "transparent"
+          activedCategory === itemSlug ? PLANET_TABS_COLORS[planetName] : ""
         }`,
       }}
-      className={`relative text-10 max-w-full px-6 py-5 tracking-widest 
-  ${activedCategory === itemSlug ? "text-pure-white" : "text-deep-grey"}  
-  md:w-full md:border-solid md:border md:border-deep-grey md:px-5 md:py-3 md:odd:my-4 ${
-    activedCategory === itemSlug ? "#" : "md:bg-transparent"
-  } lg:px-7 lg:py-3 lg:hover:bg-deep-grey lg:hover:cursor-pointer ${
-        activedCategory === itemSlug ? "#" : "lg:bg-transparent"
-      } ${spartan.className}`}
+      className={`relative text-10 max-w-full px-6 py-5 tracking-widest md:w-full md:border-solid md:border md:border-deep-grey md:px-5 md:py-3 md:odd:my-4  lg:px-7 lg:py-3 lg:hover:bg-deep-grey lg:hover:cursor-pointer ${spartan.className}`}
       onClick={() => chosenCategory(itemSlug)}
     >
       <span className="hidden md:inline md:text-grey md:mr-4 lg:mr-7 lg:text-12">{`0${
